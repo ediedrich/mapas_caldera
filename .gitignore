@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Las capas pesadas y las de terceros NO van al repositorio: se bajan del
+# Release con scripts/bajar_capas.py (ver datos/LEEME.md).
+datos/catastro/
+datos/censo/
+datos/habitat/
+datos/hidrografia/
+datos/limites/
+datos/otbn/
+datos/plantilla_ign/
+datos/relieve/
+datos/vial/
+capas-*.zip

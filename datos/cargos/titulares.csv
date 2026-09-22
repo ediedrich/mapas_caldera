@@ -1,0 +1,48 @@
+cargo,titular,desde,hasta,exacta_desde,exacta_hasta,acto,fuente
+Comisaria de policia,Ernesto J. Tedin,1921-01-01,1921-11-24,0,1,Dto. 32 acepta su renuncia,BO 890 h17-18
+Comisaria de policia,Julio Royo,1921-11-24,1922-03-08,1,1,Dto. 40; cesante por Dto. 349,BO 890 h19 / 899 h10
+Comisaria de policia,Jorge A. Rauch,1922-03-08,1922-12-31,1,0,Dto. 349,BO 899 h10
+Comisaria de policia,Eustaquio Murua,1923-01-01,1923-02-21,0,1,Dto. 701 acepta su renuncia,BO 948 h8
+Comisaria de policia,Juan de la Cruz Nogales,1923-02-26,1923-03-01,1,1,Dto. 712 interino; sin efecto por Dto. 725,BO 949 h3 y h7
+Comisaria de policia,Julio Royo,1923-03-01,1925-05-11,1,1,Dto. 725; reemplazado por Dto. 2453,BO 949 h7 / 1063 h3
+Comisaria de policia,Carlos Murua,1925-05-11,1925-10-29,1,1,Dto. 2453; renuncia por Dto. 2962,BO 1063 h3 / 1088 h2
+Comisaria de policia,Francisco Arias,1925-10-29,1926-12-31,1,0,Dto. 2962,BO 1088 h2
+Comisaria de policia,Ramon Balvoa,1927-01-01,1928-03-26,0,1,Dto. 6777 acepta su renuncia,BO 1214 h14
+Comisaria de policia,Julio Royo Ortiz,1928-05-09,1929-03-22,1,1,Dto. 7095; reemplazado por Dto. 10389,BO 1222 h6 / 1259
+Comisaria de policia,Manuel Condori,1929-03-22,1929-12-31,1,0,Dto. 10389,BO 1259
+Juzgado de paz,Carlos Matienzo,1909-01-01,1909-12-31,0,0,Juez de paz propietario; firma el cuadro de rentas,BO 1909
+Juzgado de paz,Rafael Fernandez,1912-05-01,1912-10-31,1,1,Nombrado en mayo; firma como tal en octubre,BO 1912
+Juzgado de paz,Casimiro Caceres,1918-05-06,1920-12-31,1,0,Dto. 1697 propietario,BO 1918
+Juzgado de paz,Laureano Peralta,1921-01-01,1921-12-17,0,1,Dto. 123 acepta su renuncia,BO 894 h1
+Juzgado de paz,Carlos F. Matienzo,1922-06-12,1928-03-26,1,0,Dto. 105 por terna; renovado por Dtos. 1786 y 3248,BO 912 h3 / 1023 / 1926
+Juzgado de paz,Victorio Offredi,1927-01-01,1928-03-26,0,1,Dto. 6776 acepta su renuncia,BO 1214 h14
+Juzgado de paz,Teofilo Reyes,1928-10-19,1931-12-31,1,0,Dto. 9750 suplente por terna,BO 1928
+Juzgado de paz,Rafael Delgado,1932-01-01,1932-12-31,0,1,Renuncia al juzgado de paz,BO 1932
+Registro civil,Casimiro Caceres,1921-01-01,1922-03-22,0,1,Dto. 402 lo declara cesante,BO 902 h2
+Registro civil,Julio Royo Ortiz,1922-03-22,1922-04-20,1,1,Dto. 402; sin efecto por no tomar posesion (Dto. 524),BO 902 h2 / 906 h8
+Registro civil,Santiago Guzman,1922-04-20,1922-06-27,1,1,Dto. 524; ningun acto vuelve a nombrarlo,BO 906 h8
+Registro civil,Carlos F. Matienzo,1922-06-27,1925-08-01,1,0,Dto. 135,BO 914 h4
+Registro civil,Jose Delgado,1925-01-01,1925-08-01,0,1,Licencia; lo reemplaza Rafael Delgado,BO 1925
+Registro civil,Rafael Delgado,1925-08-01,1927-12-31,1,0,Dto. 2765 interino; Dto. 2947 titular,BO 1925
+Registro civil,Ramon Balboa,1927-01-01,1928-05-09,0,1,Reemplazado por Dto. 8002,BO 1222 h7
+Registro civil,Teofilo Reyes,1928-05-09,1932-12-31,1,0,Dto. 8002,BO 1222 h7
+Registro civil,Arturo Posse,1933-01-01,1934-02-01,1,1,Dto. 15524; haberes liquidados al salir,BO 1462 h19 / 1533 h1
+Registro civil,Laura Araoz de Murua,1934-02-01,1936-12-31,1,0,Dto. 17284,BO 1526 h6
+Receptoria de rentas,Eustaquio Murua,1916-01-01,1916-12-31,0,0,Comisaria + expendeduria + receptoria,BO 1916
+Receptoria de rentas,Julio Royo,1921-01-01,1921-11-28,0,1,Pierde comisaria y receptoria en cuatro dias,BO 1921
+Receptoria de rentas,Julio Royo flor,1922-01-01,1924-01-14,0,0,Receptor de Rentas y Expendedor de Guias; fianza $5.000,BO 900 h10
+Receptoria de rentas,Julio Royo,1924-01-14,1925-05-12,1,1,Dto. 1397 expendedor de guias y marcas,BO 992
+Receptoria de rentas,Carlos Murua,1925-05-12,1928-05-18,1,0,Dto. 2465; fianza $5.000,BO 1063 h8
+Receptoria de rentas,Julio Royo Ortiz,1928-05-18,1929-04-27,1,1,Dto. 8099,BO 1928
+Receptoria de rentas,Clara Iradi,1929-04-27,1933-05-01,1,1,Dto. 10514; sigue en 1931; renuncia por Dto. 16175,BO 1929 / 1485 h18
+Receptoria de rentas,Julia Regis de Regis,1933-05-01,1936-12-31,1,0,Dto. 16205,BO 1486 h17
+Subcomisaria de Mojotoro,Medardo Sarmiento,1921-01-01,1922-01-02,0,1,"Dto. 176 cesante por el continuo abandono de su puesto",BO 895 h3
+Subcomisaria de Mojotoro,Rodolfo Perez,1922-01-02,1922-03-21,1,1,Dto. 176,BO 895 h3
+Subcomisaria de Mojotoro,Juan de la Cruz Nogales,1922-03-21,1922-06-01,1,1,Dto. 399,BO 902 h1
+Subcomisaria de Mojotoro,Victor Masclef,1922-06-01,1927-12-31,1,0,Ad honorem,BO 912 h1
+Subcomisaria de Mojotoro,Eustaquio Guerra,1928-05-09,1928-05-12,1,1,Dto. 8001; renuncia por Dto. 8024 tres dias despues,BO 1222
+Subcomisaria de Mojotoro,Juan de la Cruz Nogales,1928-05-12,1932-12-31,1,0,Dto. 8024,BO 1222
+Subcomisaria de Mojotoro,M. C. Bruzzo,1933-01-01,1933-12-31,0,0,Dto. 15652 le concede licencia,BO 1466 h14
+Subcomisaria de Vaqueros,Eustaquio Guerra,1922-03-21,1923-12-31,1,0,Dto. 399 ad honorem,BO 902 h1
+Subcomisaria de Vaqueros,Francisco S. Urquiza,1924-01-01,1925-06-25,0,1,"Dto. 2674 nombra a su reemplazante; su nombramiento no consta",BO 1070 h7
+Subcomisaria de Vaqueros,Antonio Aguero (hijo),1925-06-25,1928-12-31,1,0,Dto. 2674 ad honorem,BO 1070 h7

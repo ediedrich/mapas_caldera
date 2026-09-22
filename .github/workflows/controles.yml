@@ -1,0 +1,26 @@
+name: controles
+on: [push, pull_request]
+jobs:
+  figuras:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Sintaxis de todos los scripts
+        run: python -m compileall -q scripts
+      - name: Las tablas de datos propios abren y cierran
+        run: |
+          python - <<'PY'
+          import csv, pathlib
+          for f in sorted(pathlib.Path('datos/cargos').glob('*.csv')):
+              filas = list(csv.DictReader(f.open(encoding='utf-8')))
+              print(f.name, len(filas), 'filas')
+              assert filas, f'{f} esta vacio'
+          t = list(csv.DictReader(open('datos/cargos/titulares.csv', encoding='utf-8')))
+          for r in t:
+              assert r['desde'] < r['hasta'], r
+              assert r['exacta_desde'] in '01' and r['exacta_hasta'] in '01', r
+          ex = sum(int(r['exacta_desde']) + int(r['exacta_hasta']) for r in t)
+          print(f'bordes documentados: {ex} de {2*len(t)} ({100*ex/(2*len(t)):.0f} %)')
+          PY
