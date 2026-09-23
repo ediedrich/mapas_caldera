@@ -5,6 +5,8 @@ from adjustText import adjust_text
 FINCAS = {
     'SAN ALEJO - SANTA RUFIN': (1909, 'San Alejo y Santa Rufina'),
     'SANTA MONICA': (1912, 'Santa Mónica'),
+    'CAMPO ALEGRE': (1938, 'Campo Alegre'),
+    'CHAGUADERO Y SAN JOSE': (1930, 'Chaguadero y San José'),
     'LAS NIEVES': (1925, 'Las Nieves'),
     'MOSQUERA': (1925, 'Mosquera'),
     'LOS PORONGOS': (1910, 'Los Porongos'),

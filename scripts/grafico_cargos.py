@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Quien administra el departamento de La Caldera, 1908-1936.
+"""Quien administra el departamento de La Caldera, 1908-1946.
 
 No es un mapa: es la linea de tiempo de los cargos del departamento, un
 segmento por titular, con el estado de la Comision Municipal arriba y los
@@ -30,7 +30,7 @@ from matplotlib.colors import LinearSegmentedColormap
 import numpy as np
 
 D = Path(__file__).resolve().parents[1] / 'datos' / 'cargos'
-Y0, Y1 = 1908, 1937                      # el eje, en anios decimales
+Y0, Y1 = 1908, 1948                      # el eje, en anios decimales
 
 CARGOS = ['Comisaria de policia', 'Juzgado de paz', 'Registro civil',
           'Receptoria de rentas', 'Subcomisaria de Mojotoro',
@@ -80,7 +80,7 @@ def barra(ax, y, x0, x1, alto, color, ex0, ex1, zorder=3):
 
 
 # ancho de un caracter, en anios del eje, a la escala de esta figura
-CHAR = 0.245
+CHAR = 0.285
 
 
 # cuatro alturas alternadas para los rotulos que no entran en su barra: con
@@ -125,7 +125,7 @@ for c in CARGOS:
 
 # ------------------------------------------------------------------ figura
 fig = plt.figure(figsize=(8.27, 8.5))
-ax = fig.add_axes([0.205, 0.235, 0.765, 0.635])
+ax = fig.add_axes([0.195, 0.235, 0.735, 0.635])
 ax.set_xlim(Y0, Y1)
 
 FIL = 1.52
@@ -179,15 +179,15 @@ for k, (_, r) in enumerate(tut.iterrows()):
             va='bottom', fontsize=5.6, color='#7a0f1c', weight='bold')
 
 ax.set_yticks([])
-ax.set_xticks(range(Y0, Y1 + 1, 2))
-ax.set_xticklabels([str(a) for a in range(Y0, Y1 + 1, 2)], fontsize=6)
+ax.set_xticks(range(Y0, Y1 + 1, 4))
+ax.set_xticklabels([str(a) for a in range(Y0, Y1 + 1, 4)], fontsize=6)
 ax.tick_params(length=2, pad=2)
 for s in ('top', 'right', 'left'):
     ax.spines[s].set_visible(False)
 ax.spines['bottom'].set_color('#888888')
 
 # ------------------------------------------------------------------ textos
-fig.text(0.05, 0.972, 'Quién administra el departamento de La Caldera, 1908--1936',
+fig.text(0.05, 0.972, 'Quién administra el departamento de La Caldera, 1908--1946',
          fontsize=11, weight='bold', ha='left')
 fig.text(0.05, 0.941,
          'Un segmento por titular, en los años leídos edición por edición del Boletín Oficial. Arriba, el estado del cuerpo municipal.\n'
@@ -211,13 +211,13 @@ import textwrap
 notas = '\n'.join(textwrap.fill(f'{pd.Timestamp(r.fecha).year}  {r.rotulo}. {r.acto}',
                                 72, subsequent_indent='      ')
                   for _, r in tut.iterrows())
-fig.text(0.560, 0.158, 'Los cuatro episodios de tutela', fontsize=6.4,
+fig.text(0.560, 0.158, 'Los episodios de tutela', fontsize=6.4,
          weight='bold', va='top')
 fig.text(0.560, 0.143, notas, fontsize=4.9, va='top', linespacing=1.55,
          color='#333333')
 
 fig.text(0.055, 0.034,
-         'Fuente: decretos, resoluciones y edictos del Boletín Oficial de Salta de los años 1908--1936 leídos edición por edición\n'
+         'Fuente: decretos, resoluciones y edictos del Boletín Oficial de Salta de los años 1908--1946 leídos edición por edición\n'
          '(apéndice de fuentes). Elaboración propia con scripts/grafico_cargos.py y datos/cargos/ del repositorio mapas_caldera.',
          fontsize=5.6, va='top', color='#333333', linespacing=1.6)
 
