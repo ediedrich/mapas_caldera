@@ -1,0 +1,11 @@
+﻿# Probado el 23 de septiembre de 2026 con Python 3.12 en Windows.
+# Los nueve scripts de scripts/ corren con esto y nada mas.
+geopandas>=1.1
+pyogrio>=0.13
+rasterio>=1.5
+shapely>=2.1
+pyproj>=3.8
+matplotlib>=3.10
+pandas>=2.3
+numpy>=2.3
+adjustText>=1.4
