@@ -20,7 +20,7 @@ lo = lo[lo.nom_depto.str.contains('Caldera', na=False)]
 solo_bahra = {'Pueblo (La Caldera)'}          # los demás de BAHRA ya salen por finca
 
 COL = {1: '#dcd3c0', 2: '#dcd3c0', 3: '#8fb0bd', 4: '#8fb0bd', 5: '#8fb0bd', 6: '#8fb0bd',
-       7: '#8fb0bd', 8: '#8fb0bd', 9: '#8fb0bd', 10: '#2f6a80', 11: '#1a3d4d'}
+       7: '#8fb0bd', 8: '#8fb0bd', 9: '#8fb0bd', 10: '#8fb0bd', 11: '#2f6a80', 12: '#1a3d4d'}
 ext  = (-65.72, -24.755, -65.16, -24.36)
 extB = (-65.44, -24.72, -65.34, -24.58)
 
@@ -32,8 +32,8 @@ axL = fig.add_axes([0.515, 0.105, 0.44, 0.330]); axL.axis('off')
 for ax, e in ((axA, ext), (axB, extB)):
     base_axes(ax, e)
     rest.plot(ax=ax, fc='#f7f3ea', ec='#ddd7c8', lw=0.15, zorder=1)
-    for k in (1, 3, 10):
-        sel = hit[hit.n.isin([k, k + 1] if k != 3 else [3,4,5,6,7,8,9])]
+    for k in (1, 3, 11):
+        sel = hit[hit.n.isin([k, k + 1] if k != 3 else [3,4,5,6,7,8,9,10])]
         if len(sel):
             sel.plot(ax=ax, fc=COL[k], ec='#6f665a', lw=0.2, zorder=3)
     outline(ax)
@@ -48,8 +48,8 @@ scalebar(axA, -65.70, -24.742, 5); north(axA, -65.20, -24.40)
 scalebar(axB, -65.434, -24.712, 2); north(axB, -65.347, -24.712)
 
 sin = [n for n, *r in T if not r[NC] and n not in BAHRA]
-leg = [Patch(fc=COL[10], ec='#6f665a', label='Nombre presente en ocho o nueve de las once nóminas'),
-       Patch(fc=COL[3], ec='#6f665a', label='Presente en tres a nueve'),
+leg = [Patch(fc=COL[11], ec='#6f665a', label='Nombre presente en ocho o nueve de las doce nóminas'),
+       Patch(fc=COL[3], ec='#6f665a', label='Presente en tres a diez'),
        Patch(fc=COL[1], ec='#6f665a', label='Presente en una o dos'),
        Line2D([], [], marker='^', ls='', ms=5, mfc='#c98a2b', mec='black', mew=0.5,
               label='Paraje de BAHRA en el departamento'),
