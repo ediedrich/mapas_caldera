@@ -24,6 +24,7 @@ datos/
   habitat/        parajes y localidades (BAHRA), plantas urbanas, escuelas, salud, iglesias, edificios de gobierno (IGN)
   relieve/        MDE-Ar v2.1 30 m (IGN, hojas 2566-10, 11, 16 y 17) en mosaico; cerros (IGN)
   plantilla_ign/  provincias y países vecinos de la plantilla oficial «Argentina parte continental americana» (junio de 2025)
+  electoral/      padrón por municipio 2017–2025 y referencias censales (propios)
 scripts/
   base.py            estilo común, contorno, escala, norte
   mapa_ubicacion.py  lámina de ubicación y toponimia (cap. 1)
@@ -31,6 +32,7 @@ scripts/
   mapa_planos.py     la conversión, plano por plano (cap. 13)
   mapa_kondorwaira.py  territorio reclamado (catastro 102) y loteos (cap. 22)
   mapa_ribera.py     líneas de ribera con coordenadas publicadas (cap. 11)
+  mapa_catastro_ribera.py  parcelas con actos de ribera o de agua sobre el catastro (cap. 11)
   mapa_agua.py       el agua del departamento, 1885–1948: fincas y arco de nueve actos
   mapa_parajes.py    dónde caen hoy los topónimos de las trece nóminas (cap. 4)
   tabla_parajes.py   la toponimia en trece nóminas oficiales, 1909–1948 (cap. 4)
@@ -40,6 +42,8 @@ scripts/
   grafico_coparticipacion.py la coparticipación municipal de 1947 (cap. 4)
   grafico_boletin.py qué del Boletín Oficial leyó el libro, 1908–1950 (cap. 2)
   grafico_votado.py  lo que se votó y lo que llegó, 1929–1949 (cap. 6)
+  grafico_padron.py  padrón electoral y población, 2017–2025 (cap. 18)
+  grafico_formacion.py formación por área y radios seleccionados, 2022 (cap. 14)
   bajar_capas.py     baja las capas de terceros del Release (normaliza rutas de Windows)
   incorporar.py      recorta y guarda una capa nueva en datos/
 figuras/          PNG a 300 dpi, tal como entran al libro

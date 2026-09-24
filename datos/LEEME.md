@@ -14,7 +14,8 @@ python scripts/bajar_capas.py        # baja capas-<tag>.zip del Release y lo abr
 | carpeta | qué es |
 |---|---|
 | `cargos/` | Los titulares de los cargos del departamento, 1909–1946, transcriptos del Boletín Oficial acto por acto. `titulares.csv`, `comision.csv` y `tutela.csv`. Cada fila lleva el acto y la edición de donde sale, y dos columnas —`exacta_desde` y `exacta_hasta`— que dicen si la fecha del borde está documentada o no. |
-| `ribera/` | Las coordenadas de las líneas de ribera transcriptas de los edictos, con número de Boletín, orden de publicación y fecha de consulta por punto. |
+| `ribera/` | Las coordenadas de las líneas de ribera transcriptas de los edictos, con número de Boletín, orden de publicación y fecha de consulta por punto; y `actos_por_parcela.csv`, que transcribe la tabla del cap. 11: cada parcela con su acto de ribera, concesión o riego. |
+| `electoral/` | Padrón por municipio 2017–2025 (Tribunal Electoral de Salta) y referencias censales. |
 | `fiscal/` | Montos transcriptos de actos de gasto: el Ítem 6 de 1947 y de 1949, la coparticipación de 1947, y lo votado y lo que llegó entre 1929 y 1949, cada fila con su lugar en el libro. |
 | `boletin/` | El índice de ediciones de `boletines-salta` (1910–1943) y el estado de lectura de cada tramo, según el libro. Ver su LEEME. |
 | `censo_tablas/` | Las tablas del Censo 2022 que usa el libro, en un solo lugar. Ver su LEEME. |
