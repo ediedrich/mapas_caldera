@@ -1,4 +1,17 @@
 cargo,titular,desde,hasta,exacta_desde,exacta_hasta,acto,fuente
+Comisaria de policia,Escolastico M. Aparicio,1909-01-01,1909-12-31,1,0,Nombrado en diciembre de 1908 comisario para 1909,"BO 1908 (cap. 4, Aparicio)"
+Comisaria de policia,Escolastico M. Aparicio,1910-04-15,1913-02-15,0,0,Nombrado en abril de 1910; otra vez en diciembre de 1910 y el 28/02/1912; renuncia en febrero de 1913,BO 148 h3 / 219 h3 / 1912 / 1913
+Comisaria de policia,Julio del Solar,1913-02-15,1914-12-31,0,0,Reemplaza a Aparicio en febrero de 1913; renombrado por el decreto anual de abril de 1914,BO 478 h1
+Comisaria de policia,Manuel R. Cornejo,1915-06-01,1916-03-04,0,1,El decreto del 04/03/1916 nombra a Murua en su vacante,BO 596 h1
+Comisaria de policia,Eustaquio Murua,1916-03-04,1918-12-31,1,0,Nombrado el 04/03/1916; confirmado por Dto. 1101 en febrero de 1917,BO 596 h1 / 1917
+Comisaria de policia,Ambrosio L. Mascietti,1919-01-03,1919-12-31,0,0,Nombrado en la primera edicion de 1919,BO 1919 (cap. 4)
+Registro civil,Leoncio A. Mascietti,1919-01-15,1920-08-05,0,0,Dto. 49 de enero de 1919,BO 1919 (cap. 4)
+Subcomisaria de Mojotoro,Benjamin Lopez,1911-10-01,1913-10-11,0,1,Subcomisario del partido de la estacion y encargado ad honorem del Registro Civil de la estacion (octubre de 1911); comisario del partido en diciembre de 1912; lo sucede Jose Nogales con antiguedad al 11/10/1913,BO 291 h3 (1911) / 379 h3 (1912)
+Subcomisaria de Mojotoro,Jose Nogales,1913-10-11,1914-07-15,1,0,Nombrado en febrero de 1914 con antiguedad al 11/10/1913; el decreto de julio lo reemplaza sin nombrarlo,BO 469 h2 / 504 h2-3
+Subcomisaria de Mojotoro,Benjamin Lopez,1914-07-15,1914-12-31,0,0,El decreto de julio de 1914 reorganiza la subcomisaria y lo nombra,BO 504 h2-3
+Subcomisaria de Mojotoro,Silverio Caceres,1919-09-15,1920-02-04,0,1,Dto. 522 crea la subcomisaria con sueldo (septiembre de 1919); Dto. 677 acepta su renuncia,BO 1919 / 795
+Subcomisaria de Mojotoro,Jose Agustin Martinez,1920-02-26,1920-06-16,1,0,Dto. 724; el Dto. 901 declara la vacante sin nombrarlo,BO 798 / 816
+Subcomisaria de Mojotoro,Ciro Caceres,1920-06-16,1920-12-31,1,0,"Dto. 901, por nota de la Jefatura que no se publica",BO 816
 Comisaria de policia,Ernesto J. Tedin,1921-01-01,1921-11-24,0,1,Dto. 32 acepta su renuncia,BO 890 h17-18
 Comisaria de policia,Julio Royo,1921-11-24,1922-03-08,1,1,Dto. 40; cesante por Dto. 349,BO 890 h19 / 899 h10
 Comisaria de policia,Jorge A. Rauch,1922-03-08,1922-12-31,1,0,Dto. 349,BO 899 h10
@@ -18,7 +31,7 @@ Juzgado de paz,Carlos F. Matienzo,1922-06-12,1928-03-26,1,0,Dto. 105 por terna; 
 Juzgado de paz,Victorio Offredi,1927-01-01,1928-03-26,0,1,Dto. 6776 acepta su renuncia,BO 1214 h14
 Juzgado de paz,Teofilo Reyes,1928-10-19,1931-12-31,1,0,Dto. 9750 suplente por terna,BO 1928
 Juzgado de paz,Rafael Delgado,1932-01-01,1932-12-31,0,1,Renuncia al juzgado de paz,BO 1932
-Registro civil,Casimiro Caceres,1921-01-01,1922-03-22,0,1,Dto. 402 lo declara cesante,BO 902 h2
+Registro civil,Casimiro Caceres,1920-08-05,1922-03-22,1,1,Dto. 1140 (25/10/1920) reconoce el interinato desde el 5 de agosto; Dto. 402 lo declara cesante,BO 1920 / 902 h2
 Registro civil,Julio Royo Ortiz,1922-03-22,1922-04-20,1,1,Dto. 402; sin efecto por no tomar posesion (Dto. 524),BO 902 h2 / 906 h8
 Registro civil,Santiago Guzman,1922-04-20,1922-06-27,1,1,Dto. 524; ningun acto vuelve a nombrarlo,BO 906 h8
 Registro civil,Carlos F. Matienzo,1922-06-27,1925-08-01,1,0,Dto. 135,BO 914 h4
@@ -36,7 +49,7 @@ Receptoria de rentas,Carlos Murua,1925-05-12,1928-05-18,1,0,Dto. 2465; fianza $5
 Receptoria de rentas,Julio Royo Ortiz,1928-05-18,1929-04-27,1,1,Dto. 8099,BO 1928
 Receptoria de rentas,Clara Iradi,1929-04-27,1933-05-01,1,1,Dto. 10514; sigue en 1931; renuncia por Dto. 16175,BO 1929 / 1485 h18
 Receptoria de rentas,Julia Regis de Regis,1933-05-01,1936-12-31,1,0,Dto. 16205,BO 1486 h17
-Subcomisaria de Mojotoro,Medardo Sarmiento,1921-01-01,1922-01-02,0,1,"Dto. 176 cesante por el continuo abandono de su puesto",BO 895 h3
+Subcomisaria de Mojotoro,Medardo Sarmiento,1921-01-01,1922-01-02,0,1,Dto. 176 cesante por el continuo abandono de su puesto,BO 895 h3
 Subcomisaria de Mojotoro,Rodolfo Perez,1922-01-02,1922-03-21,1,1,Dto. 176,BO 895 h3
 Subcomisaria de Mojotoro,Juan de la Cruz Nogales,1922-03-21,1922-06-01,1,1,Dto. 399,BO 902 h1
 Subcomisaria de Mojotoro,Victor Masclef,1922-06-01,1927-12-31,1,0,Ad honorem,BO 912 h1
@@ -44,12 +57,12 @@ Subcomisaria de Mojotoro,Eustaquio Guerra,1928-05-09,1928-05-12,1,1,Dto. 8001; r
 Subcomisaria de Mojotoro,Juan de la Cruz Nogales,1928-05-12,1932-12-31,1,0,Dto. 8024,BO 1222
 Subcomisaria de Mojotoro,M. C. Bruzzo,1933-01-01,1933-12-31,0,0,Dto. 15652 le concede licencia,BO 1466 h14
 Subcomisaria de Vaqueros,Eustaquio Guerra,1922-03-21,1923-12-31,1,0,Dto. 399 ad honorem,BO 902 h1
-Subcomisaria de Vaqueros,Francisco S. Urquiza,1924-01-01,1925-06-25,0,1,"Dto. 2674 nombra a su reemplazante; su nombramiento no consta",BO 1070 h7
+Subcomisaria de Vaqueros,Francisco S. Urquiza,1924-01-01,1925-06-25,0,1,Dto. 2674 nombra a su reemplazante; su nombramiento no consta,BO 1070 h7
 Subcomisaria de Vaqueros,Antonio Aguero (hijo),1925-06-25,1928-12-31,1,0,Dto. 2674 ad honorem,BO 1070 h7
 Comisaria de policia,Ramon Juarez,1936-01-01,1937-03-01,0,1,Licencia en enero y renuncia en marzo (Dto. 1681),BO 1670 h24 / 1681 h2
 Comisaria de policia,Fabian Alonso,1937-03-01,1938-03-01,1,1,Dto. 1681 interino; reconocimiento de servicios por Dto. de 1938,BO 1681 h2 / 1737 h8
 Comisaria de policia,Jorge O. Blasco,1938-03-01,1938-12-01,1,1,Dto. 1732; permutado con San Carlos,BO 1732 h1 / 1769 h5
-Comisaria de policia,Abraham Alegre,1938-12-01,1939-06-01,1,1,"Dto. 1769; separado por actos graves de inconducta",BO 1769 h5 / 1796 h5
+Comisaria de policia,Abraham Alegre,1938-12-01,1939-06-01,1,1,Dto. 1769; separado por actos graves de inconducta,BO 1769 h5 / 1796 h5
 Comisaria de policia,Claudio Murua,1939-06-01,1942-05-01,1,0,Dto. 1798; licencia por salud en 1940,BO 1798 h6 / 1836 h7
 Comisaria de policia,Augusto Regis,1942-05-01,1943-09-30,1,1,Dto. 1952; renuncia y se le liquidan 9 dias de setiembre,BO 1952 h16 / 2021 h14
 Comisaria de policia,Fidel Barrionuevo,1943-10-01,1943-12-31,1,0,Dto. 2021 sargento,BO 2021 h14
@@ -66,7 +79,7 @@ Registro civil,Teofilo Reyes,1945-06-01,1946-12-31,1,0,Dto. 8862 en reemplazo de
 Receptoria de rentas,Julia R. de Regis,1936-01-01,1944-01-01,0,0,Receptora y expendedora de valores fiscales; liquidaciones 1938-1943,BO 1729 h30 / 1997 h29
 Receptoria de rentas,Francisco R. Arias,1944-01-01,1946-09-01,0,1,Ex-receptor y expendedor; descargos por Contaduria,BO 2053 h15
 Receptoria de rentas,Gerardo Guerrero,1946-09-01,1946-12-31,1,0,Designado en reemplazo,BO 2618 h7
-Subcomisaria de Mojotoro,Jose Atilio Bruzzo,1939-01-01,1943-12-01,0,1,"Dto. 1795; renuncia en 1943",BO 1795 h33 / 2033 h14
+Subcomisaria de Mojotoro,Jose Atilio Bruzzo,1939-01-01,1943-12-01,0,1,Dto. 1795; renuncia en 1943,BO 1795 h33 / 2033 h14
 Subcomisaria de Mojotoro,Nicolas Mejia,1944-01-01,1946-12-31,1,0,Dto. 2043; tambien expendedor de guias de Mojotoro,BO 2043 h30 / 2053 h11
 Subcomisaria de Vaqueros,Manuel S. Gimenez,1936-01-01,1937-02-01,0,1,Cesante por Dto. de 1937,BO 1671 h36
 Subcomisaria de Vaqueros,Manuel Cordoba,1938-09-01,1939-08-01,1,1,Dto. de 1938; renuncia aceptada en 1939,BO 1759 h12 / 1811 h2

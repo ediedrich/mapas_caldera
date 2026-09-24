@@ -3,7 +3,7 @@
 
 No es un mapa: es la linea de tiempo de los cargos del departamento, un
 segmento por titular, con el estado de la Comision Municipal arriba y los
-cuatro episodios de tutela marcados con una linea vertical.
+episodios de tutela (los que liste tutela.csv) marcados con una linea vertical.
 
 Los datos NO estan en el codigo: salen de tres tablas de datos/cargos/, que
 son el lugar donde se corrigen y se amplian.
@@ -49,7 +49,8 @@ COLEST = {'En funciones': '#4f7d4a',
           'Intervenida': '#3b2f6b',
           'Acefala': '#111111',
           'Desintegrada': '#8a8375',
-          'Sin comision municipal': '#e8e3d6'}
+          'Sin comision municipal': '#e8e3d6',
+          'Municipalidad electiva (en el papel)': '#d9b44a'}
 ESTXT = {'Sin comision municipal': '#555555', 'Desintegrada': '#ffffff'}
 
 AZUL = ['#1f4e5f', '#5a8ca0', '#2f6a80', '#8fb0bd', '#3d6b57', '#7d9a3c',
@@ -168,7 +169,7 @@ for i, c in enumerate(CARGOS):
     ax.text(Y0 - 0.30, y, ROTULO[c], va='center', ha='right', fontsize=7.0)
     ax.axhline(y - FIL / 2, color='#e4e0d6', lw=0.5, zorder=1)
 
-# --- los cuatro episodios de tutela
+# --- los episodios de tutela
 ybot = min(ys.values()) - 0.90
 for k, (_, r) in enumerate(tut.iterrows()):
     x = dec(r.fecha)
@@ -187,7 +188,7 @@ for s in ('top', 'right', 'left'):
 ax.spines['bottom'].set_color('#888888')
 
 # ------------------------------------------------------------------ textos
-fig.text(0.05, 0.972, 'Quién administra el departamento de La Caldera, 1908--1946',
+fig.text(0.05, 0.972, 'Quién administra el departamento de La Caldera, 1908–1946',
          fontsize=11, weight='bold', ha='left')
 fig.text(0.05, 0.941,
          'Un segmento por titular, en los años leídos edición por edición del Boletín Oficial. Arriba, el estado del cuerpo municipal.\n'
@@ -201,6 +202,7 @@ leg = [Patch(fc=COLEST['En funciones'], label='Comisión en funciones'),
        Patch(fc=COLEST['Acefala'], label='Acéfala'),
        Patch(fc=COLEST['Desintegrada'], label='Desintegrada'),
        Patch(fc=COLEST['Sin comision municipal'], ec='#cdc4b0', label='Sin comisión municipal'),
+       Patch(fc=COLEST['Municipalidad electiva (en el papel)'], label='Municipalidad electiva, siete semanas de 1918'),
        Line2D([], [], color='#7a0f1c', lw=1.0, ls=(0, (4, 2)), marker='v', ms=4,
               label='Episodio de tutela')]
 fig.legend(handles=leg, loc='lower left', bbox_to_anchor=(0.055, 0.062),
@@ -217,7 +219,7 @@ fig.text(0.560, 0.143, notas, fontsize=4.9, va='top', linespacing=1.55,
          color='#333333')
 
 fig.text(0.055, 0.034,
-         'Fuente: decretos, resoluciones y edictos del Boletín Oficial de Salta de los años 1908--1946 leídos edición por edición\n'
+         'Fuente: decretos, resoluciones y edictos del Boletín Oficial de Salta de los años 1908–1946 leídos edición por edición\n'
          '(apéndice de fuentes). Elaboración propia con scripts/grafico_cargos.py y datos/cargos/ del repositorio mapas_caldera.',
          fontsize=5.6, va='top', color='#333333', linespacing=1.6)
 

@@ -5,13 +5,15 @@ en datos/. Ver datos/LEEME.md para qué es cada una y de dónde sale.
 
     python scripts/bajar_capas.py [tag]
 
-Por defecto usa el tag 'capas'. No pisa las capas propias (cargos/, ribera/).
+Por defecto usa el tag 'capas'. No pisa las capas propias (las carpetas de PROPIAS).
+El zip del Release se armó en Windows y sus rutas traen barra invertida: se
+normalizan antes de extraer, para que el script funcione igual en Linux y macOS.
 """
 import io, sys, zipfile, urllib.request
 from pathlib import Path
 
 REPO = 'ediedrich/mapas_caldera'
-PROPIAS = {'cargos', 'ribera'}
+PROPIAS = {'cargos', 'ribera', 'fiscal', 'agua', 'toponimia', 'boletin', 'censo_tablas'}
 D = Path(__file__).resolve().parents[1] / 'datos'
 
 
@@ -29,10 +31,13 @@ def main(tag='capas'):
     z = zipfile.ZipFile(io.BytesIO(datos))
     n = 0
     for m in z.namelist():
-        p = Path(m)
-        if p.parts and p.parts[0] in PROPIAS:
+        rel = m.replace('\\', '/')
+        p = Path(rel)
+        if rel.endswith('/') or (p.parts and p.parts[0] in PROPIAS):
             continue
-        z.extract(m, D)
+        destino = D / p
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_bytes(z.read(m))
         n += 1
     print(f'{n} archivos en {D}')
     for d in sorted(x for x in D.iterdir() if x.is_dir()):

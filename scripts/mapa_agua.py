@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
-"""El agua del departamento entre 1885 y 1946: quien la concedia, desde donde
+"""El agua del departamento entre 1885 y 1948: quien la concedia, desde donde
 empezo a vigilarla otro, y donde caen las fincas de cada acto.
 
-No es un mapa de cursos de agua: es el mapa de SIETE ACTOS. Cada finca que
+No es un mapa de cursos de agua: es el mapa de los actos de agua del archivo
+(los de ACTOS, que nombran una finca) y de su arco (los de ARCO, que nombran
+una facultad). 1947 y 1948 salen del barrido sin lectura sobre la imagen, pero
+los dos actos de 1948 que se dibujan estan verificados sobre el facsimil. Cada finca que
 aparece esta nombrada en un acto publicado del Boletin Oficial, y los dos
 puntos marcados son los que dos de esos actos eligen como limite de una
 facultad.
@@ -38,8 +41,13 @@ ACTOS = {
                              'Derechos «desde fecha inmemorial»'),
     'ABRA DE LESSER':       (1942, 'Abra de Lesser',
                              'Aguas que nacen y mueren en la finca'),
+    'LA HELVECIA':          (1948, 'La Helvecia',
+                             'Pfister pide 50 l/s y se le reconocen 12,6'),
+    'EL ANGOSTO':           (1948, 'El Angosto',
+                             'Linares: 15,22 l/s, temporal y eventual'),
 }
-COL = {1885: '#7a0f1c', 1924: '#c4452f', 1938: '#e8913a', 1942: '#f2cf5b'}
+COL = {1885: '#7a0f1c', 1924: '#c4452f', 1938: '#e8913a', 1942: '#f2cf5b',
+       1948: '#8fb0bd'}
 
 # ---------------------------------------------------------------- capas
 hid = gpd.read_file(D / 'hidrografia' / 'cursos_perennes_ign.gpkg')
@@ -122,7 +130,8 @@ north(ax, -65.23, -24.43)
 OFF = {'SAUSAL O CURUZU': (-0.085, -0.028), 'CERRO DE BUENA VISTA': (-0.100, 0.012),
        'VAQUEROS O ENTRE RIOS': (0.055, -0.048), 'WIERNA': (0.072, -0.010),
        'CAMPO ALEGRE': (0.070, 0.030), 'YACONES - ABRA DE LESSER': (-0.055, 0.052),
-       'ABRA DE LESSER': (-0.090, -0.020)}
+       'ABRA DE LESSER': (-0.090, -0.020), 'LA HELVECIA': (0.075, 0.052),
+       'EL ANGOSTO': (-0.085, 0.035)}
 for k, (an, rot, _) in ACTOS.items():
     gsub = fin[k]
     if gsub.empty:
@@ -139,49 +148,56 @@ ax.set_title('A. Las fincas de cada acto, y el punto desde el cual la facultad '
              'pasó a otro municipio', fontsize=8.4, loc='left', pad=6)
 
 # ---------------------------------------------------------------- el arco
-axb = fig.add_axes([0.075, 0.175, 0.865, 0.145])
-axb.set_xlim(1878, 1953); axb.set_ylim(0, 1); axb.axis('off')
+axb = fig.add_axes([0.075, 0.150, 0.865, 0.195])
+axb.set_xlim(1878, 1953); axb.set_ylim(-0.55, 1.75); axb.axis('off')
 ARCO = [(1885, 'CONCEDE', 'La Municipalidad otorga 30 l/s\ndel Wierna a Eustaquio Murúa', '#7a0f1c'),
         (1914, 'REGLAMENTA', 'Ordenanza del 13 de octubre: reglamenta\nla distribución de la totalidad', '#a52f28'),
+        (1918, 'PROPONE', 'Los Jueces de Agua los nombra la\nProvincia a propuesta del comisionado', '#b5372b'),
         (1929, 'PIERDE', 'Ley 11.078: Campo Santo vigila\ny prohíbe tomas desde las juntas', '#c4452f'),
         (1931, 'COMPARTE', 'Comisión ad hoc con Campo Santo sobre\nlas aguas del Vaqueros y el Wierna', '#e8913a'),
+        (1939, 'DENIEGA', 'La ordenanza de 1914 le gana a una\nconcesión provincial para Campo Alegre', '#d4692f'),
         (1942, 'INSCRIBE', 'Los derechos del municipio pasan\na los registros provinciales', '#d9b44a'),
-        (1946, 'COLABORA', 'Hidráulica fija zonas y un umbral de\n2.500 l/s; el municipio «colabora»', '#f2cf5b')]
-axb.plot([1883, 1948], [0.66, 0.66], color='#888888', lw=1.0)
+        (1946, 'COLABORA', 'Hidráulica fija zonas y un umbral de\n2.500 l/s; el municipio «colabora»', '#f2cf5b'),
+        (1948, 'NO OBSERVA', 'Consultado por La Helvecia: «no tiene\nobservación alguna que formular»', '#8fb0bd')]
+axb.plot([1883, 1950], [0.60, 0.60], color='#888888', lw=1.0)
+# cuatro alturas alternadas: con nueve actos, dos no alcanzan
+NIV = [(0.74, 1), (0.46, -1), (1.16, 1), (0.04, -1)]
 for i, (a, verbo, txt, col) in enumerate(ARCO):
-    axb.plot(a, 0.66, marker='o', ms=8, mfc=col, mec='#333333', mew=0.7, zorder=3)
-    arriba = i % 2 == 0
-    y = 0.80 if arriba else 0.50
-    axb.text(a, y, f'{a}  ·  {verbo}', fontsize=6.6, ha='center',
-             va='bottom' if arriba else 'top', weight='bold', color=col)
-    axb.text(a, y + (0.13 if arriba else -0.13), txt, fontsize=5.1, ha='center',
-             va='bottom' if arriba else 'top', color='#333333', linespacing=1.3)
-axb.set_title('B. El arco, en seis actos y cuatro verbos: conceder, reglamentar, '
-              'compartir, colaborar', fontsize=8.4, loc='left', pad=14)
+    axb.plot(a, 0.60, marker='o', ms=7, mfc=col, mec='#333333', mew=0.7, zorder=3)
+    y, s = NIV[i % 4]
+    if abs(y - 0.60) > 0.2:
+        axb.plot([a, a], [0.60, y], color='#bbbbbb', lw=0.5, zorder=1)
+    axb.text(a, y, f'{a}  ·  {verbo}', fontsize=6.0, ha='center',
+             va='bottom' if s > 0 else 'top', weight='bold', color=col)
+    axb.text(a, y + 0.13 * s, txt, fontsize=4.7, ha='center',
+             va='bottom' if s > 0 else 'top', color='#333333', linespacing=1.3)
+axb.set_title('B. El arco, en nueve actos: el municipio concede, reglamenta, propone, '
+              'deniega, colabora y, al final, no observa', fontsize=8.4, loc='left', pad=4)
 
 # ---------------------------------------------------------------- leyenda
 h = [Patch(fc=COL[a], ec='#333333',
            label={1885: '1885 · concesión municipal',
                   1924: '1924 · concesión a Urquiza',
                   1938: '1938 · concesión «Campo Alegre»',
-                  1942: '1942 · derechos inscriptos por la Provincia'}[a])
-     for a in (1885, 1924, 1938, 1942)]
+                  1942: '1942 · derechos inscriptos por la Provincia',
+                  1948: '1948 · reconocimientos a La Helvecia y El Angosto'}[a])
+     for a in (1885, 1924, 1938, 1942, 1948)]
 h += [Line2D([], [], color='#2f6a80', lw=1.5, label='Curso perenne (IGN)'),
       Line2D([], [], color='#8fb0bd', lw=1.0, ls=(0, (4, 2)), label='Arroyo Castellanos (intermitente)'),
       Line2D([], [], marker='o', ms=7, mfc='white', mec='#7a0f1c', mew=2, ls='',
              label='Las juntas: límite de la facultad de 1929')]
-fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.075, 0.062),
+fig.legend(handles=h, loc='lower left', bbox_to_anchor=(0.075, 0.052),
            frameon=False, fontsize=6.2, ncol=2, handlelength=1.5,
            columnspacing=1.6, labelspacing=0.5)
 
 fig.text(0.075, 0.970,
-         'El agua del departamento de La Caldera, 1885--1946',
+         'El agua del departamento de La Caldera, 1885–1948',
          fontsize=12.5, weight='bold')
 fig.text(0.075, 0.941,
          'Quién la concedía, desde dónde empezó a vigilarla otro municipio, y dónde caen las fincas de cada acto.',
          fontsize=7.4, color='#333333')
 
-fig.text(0.560, 0.038,
+fig.text(0.640, 0.038,
          'Lo que no puede dibujarse: el recorrido de la acequia de Urquiza,\n'
          'porque el croquis que su escrito dice acompañar no se publicó; y las\n'
          'superficies regadas, porque ningún acto las georreferencia. Las fincas\n'
@@ -189,8 +205,8 @@ fig.text(0.560, 0.038,
          fontsize=5.0, va='bottom', color='#555555', linespacing=1.5)
 
 fig.text(0.075, 0.018,
-         'Fuentes: Boletín Oficial de Salta, años 1908--1946 leídos edición por edición (apéndice de fuentes); cursos de agua y límites, IGN;\n'
-         'fincas, campo «finca» del catastro parcelario de la Provincia (IDESA, septiembre de 2026). Elaboración propia con scripts/mapa_agua.py.',
+         'Fuentes: Boletín Oficial de Salta, 1908–1946 leídos edición por edición y 1947–1948 barridos, con los actos de 1948 verificados sobre el facsímil\n(apéndice de fuentes); cursos de agua y límites, IGN; '
+         'fincas, campo «finca» del catastro parcelario (IDESA, septiembre de 2026). Elaboración propia con scripts/mapa_agua.py.',
          fontsize=5.4, color='#333333', linespacing=1.5)
 
 fig.savefig(FIG / 'fig-agua-actos.png', dpi=300)

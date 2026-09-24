@@ -2,7 +2,7 @@
 
 Repositorio cartográfico de *El dispositivo caldereño*: las capas recortadas al departamento La Caldera (Salta), el relieve, los scripts que dibujan las láminas y las figuras resultantes.
 
-- **Última actualización:** 19 de septiembre de 2026.
+- **Última actualización:** 24 de septiembre de 2026.
 - **Sistema de referencia:** todas las capas están en WGS 84 / POSGAR 07 geográficas (EPSG:4326). Las superficies se calculan en proyección equivalente (EPSG:6933).
 - **Recorte:** cada capa nacional se recortó al rectángulo 65,85°–65,0° O, 24,85°–24,25° S, que contiene al departamento con margen. Los originales nacionales no se guardan acá; están en las descargas de cada fuente.
 
@@ -11,6 +11,10 @@ Repositorio cartográfico de *El dispositivo caldereño*: las capas recortadas a
 ```
 datos/
   censo/          radios del Censo 2022 (INDEC, cartografía corregida CEUR-CONICET v1.0)
+  censo_tablas/   tablas del Censo 2022 que usa el libro (propias, en git)
+  boletin/        índice de ediciones de boletines-salta y estado de lectura (propias, en git)
+  fiscal/         montos transcriptos de actos de gasto (propias, en git)
+  cargos/         titulares de los cargos del departamento (propias, en git)
   catastro/       catastro parcelario (IDESA), parcelas que cita el libro, marcador
   ribera/         puntos y líneas de ribera de los edictos del Boletín Oficial (planilla y capas)
   otbn/           capas base del informe técnico de la Ley 8483: cuencas y catastro rural
@@ -27,6 +31,16 @@ scripts/
   mapa_planos.py     la conversión, plano por plano (cap. 13)
   mapa_kondorwaira.py  territorio reclamado (catastro 102) y loteos (cap. 22)
   mapa_ribera.py     líneas de ribera con coordenadas publicadas (cap. 11)
+  mapa_agua.py       el agua del departamento, 1885–1948: fincas y arco de nueve actos
+  mapa_parajes.py    dónde caen hoy los topónimos de las trece nóminas (cap. 4)
+  tabla_parajes.py   la toponimia en trece nóminas oficiales, 1909–1948 (cap. 4)
+  mapa_fracciones.py las tres fracciones censales de 2022 (caps. 24 y 26)
+  grafico_cargos.py  quién administra el departamento, 1908–1946 (cap. 4)
+  grafico_defensas.py las defensas contra crecientes, 1947 y 1949 (cap. 4)
+  grafico_coparticipacion.py la coparticipación municipal de 1947 (cap. 4)
+  grafico_boletin.py qué del Boletín Oficial leyó el libro, 1908–1950 (cap. 2)
+  grafico_votado.py  lo que se votó y lo que llegó, 1929–1949 (cap. 6)
+  bajar_capas.py     baja las capas de terceros del Release (normaliza rutas de Windows)
   incorporar.py      recorta y guarda una capa nueva en datos/
 figuras/          PNG a 300 dpi, tal como entran al libro
 fuentes/          Boletín Oficial 1944 (texto), Anexo I de la Ley 8483, metodología de radios
